@@ -1,0 +1,38 @@
+<ion-view view-title="{{ocorrencia.dataCriacao}}">
+  <ion-content class="padding">
+
+    
+    <div class="card">
+    	<div class="item item-divider">
+	    	<span ng-show="isFoto == true">Foto</span>
+	    	<span ng-show="isFoto == false">Video</span>
+	  </div>
+	  <div class="item item-text-wrap">
+	    <img ng-show="isFoto == true" src="{{ocorrencia.foto}}" width="100%">
+	    <video ng-show="isFoto == false" width="320" height="240" controls>
+        <source  src="{{ocorrencia.foto}}" type="video/mp4">
+	      Your browser does not support the video tag.
+	      </video>
+	  </div>
+	  <div class="item item-divider">
+	    Endereço
+	  </div>
+	  <div class="item item-text-wrap">
+	    {{ocorrencia.endereco}}
+	  </div>
+	  <div class="item item-divider">
+	    Situação
+	  </div>
+	  <div class="item item-text-wrap">
+	    <h3 class="assertive">{{ocorrencia.situacao}}</h3>
+	  </div>
+	  <div class="item item-divider">
+	    Latitude / Longitude
+	  </div>
+	  <div class="item item-text-wrap">
+	    {{ocorrencia.latitude}} / {{ocorrencia.longitude}}
+	  </div>
+	</div>
+    <button class="button button-block button-assertive" ng-show="ocorrencia.situacaoOcorrencia == 'PENDENTE'" ng-click="cancelarSolicitacao(ocorrencia)">Cancelar Solicitação</button>
+  </ion-content>
+</ion-view>

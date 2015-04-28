@@ -1,0 +1,34 @@
+<ion-view view-title="Cadastro">
+  <ion-content class="padding">
+	  <div class="list">
+	  <div class="card" ng-show="error.messages.length != 0">
+		  <div class="item item-divider" style="background: #EF473A; color: white">
+		    Atenção
+		  </div>
+		  <div class="item item-text-wrap">
+		    <div ng-repeat='erro in error.messages'>{{erro}}</div>
+		  </div>
+		</div>
+	 
+	  <!--label class="item item-input item-stacked-label" ng-class="{error: error.nome}">
+	    <span class="input-label">Nome Completo</span>
+	    <input type="text" placeholder="Ex: Ivane Rios da Silva" ng-model="solicitante.nome" required="true">
+	  </label>
+	  <label class="item item-input item-stacked-label" ng-class="{error: error.telefone}">
+	    <span class="input-label">Telefone</span>
+	    <input type="text" placeholder="Ex: 81 98430904" ng-model="solicitante.telefone">
+	  </label-->
+	  <label class="item item-input" ng-class="{error: error.nome}">
+	    <span class="input-label">Nome Completo:</span>
+	    <input type="text" placeholder="Ex: Ivane Rios da Silva" ng-model="solicitante.nome" required="true">
+	  </label>
+	  <label class="item item-input" ng-class="{error: error.telefone}">
+	    <span class="input-label">Telefone:</span>
+	    <input type="text" placeholder="Ex: 81 98430904" ng-model="solicitante.telefone">
+	  </label>
+	  <div class="padding-top">
+	  	<button class="button button-block button-assertive" ng-click='cadastrar()'>Cadastrar</button>
+	  </div>
+	</div>
+  </ion-content>
+</ion-view>

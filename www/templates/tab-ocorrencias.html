@@ -1,0 +1,14 @@
+<ion-view view-title="Ocorrências">
+  <ion-content>
+    <ion-list ng-show="ocorrencias.length > 0">
+      <ion-item class="item-icon-right" ng-repeat="ocorrencia in ocorrencias" type="item-text-wrap" href="#/tab/ocorrencias/{{ocorrencia.id}}">
+        {{ocorrencia.dataCriacao}}
+        <span class="item-note">{{ocorrencia.situacao}}</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+    <div class="center">
+    	<h4 ng-show="ocorrencias.length === 0" class="assertive" style="margin-top: 30px">Nenhuma ocorrência registrada.</h2>
+    </div>
+  </ion-content>
+</ion-view>
